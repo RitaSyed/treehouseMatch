@@ -38,7 +38,7 @@ const initializeButton = (e) => {
   let inputPlayer2Value = inputPlayer2.value;
   xhr(inputPlayer1Value);
   xhr(inputPlayer2Value);
-  setTimeout(displayWinner, 2000);
+  setTimeout(displayWinner, 2500);
 };
 
 // sends the xhr for players
@@ -53,6 +53,7 @@ const xhr = (inputPlayerUsername) =>{
 
 function executeThisCodeIfXHRFails () {
   console.log("error");
+  addEventListenerButton();
 }
 
 // parses xhr for both players and calls to display players imgs and points, and calls to push players data to the emtry array
@@ -112,7 +113,7 @@ const displayWinner = () => {
   }
     domString += `</div>`;
   winnerBadges[0].forEach((badge) => {
-    domString +=  `<div class="col-xs-3">`;
+    domString +=  `<div class="col-xs-6 col-md-3 col-lg-2">`;
     domString +=    `<div class="panel">`;
     domString +=      `<div class="panel-heading">`;
     domString +=        `<p class="text-center badge-name">${badge.name}</p>`;
@@ -126,6 +127,7 @@ const displayWinner = () => {
   printToDom(domString, "play");
   domString = "";
   playersInfo =[];
+  addEventListenerButton();
 }
   
 const startApplication = () => {

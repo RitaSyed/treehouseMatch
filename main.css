@@ -39,12 +39,11 @@ body{
   border: solid 1px red;
   text-align: center;
   height: 300px;
-  /* width: 200px; */
 }
+
 .margin-top-winnerHeading{
     margin-top: 40px;
 }
-
 
 .caption,
 #button {
@@ -65,5 +64,4 @@ input {
 
 #button{
   font-family: 'Ultra', serif;
-  
 }
