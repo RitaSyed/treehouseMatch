@@ -1,4 +1,5 @@
 console.log("js");
+let playersInfo =[];
 
 const printToDom = (domString, divId) => {
   document.getElementById(divId).innerHTML += domString;
@@ -38,6 +39,7 @@ const initializeButton = (e) => {
   let inputPlayer2Value = inputPlayer2.value;
   xhr1(inputPlayer1Value);
   xhr1(inputPlayer2Value);
+  setTimeout(displayWinner, 2000);
 }
 
 
@@ -60,8 +62,8 @@ function player1JSONConvert() {
     // buildDomString(playersData);
     // console.log(playersData);
     
-   displayCageMatchResults(playersData);
-    
+  displayCageMatchResults(playersData);
+  addPointstoArray(playersData);
     // console.log(displayCageMatchResults);
     // selectWinner(event);
    
@@ -83,6 +85,19 @@ const displayCageMatchResults = players => {
   console.log
   printToDom(domString, "play");
 };
+
+const addPointstoArray = (playersData) => {
+  const points1 = playersData.points.total;
+  const name = playersData.profile_name;
+  const badges = playersData.badges;
+  // console.log(playersData.profile_name);
+  playersInfo.push({
+      name: name,
+      points: points1,
+      badges: badges
+    });
+  
+}
 
 const startApplication = () => {
   buildDomString(); 
