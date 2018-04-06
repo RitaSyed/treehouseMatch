@@ -53,19 +53,36 @@ const xhr1 = (inputPlayerUsername) =>{
 function executeThisCodeIfXHRFails () {
 }
 
-  function player1JSONConvert() {
-    let playersData = JSON.parse(this.responseText);
-    console.log("profile");
+function player1JSONConvert() {
+  let playersData = JSON.parse(this.responseText);
+  console.log("profile");
     // buildDomString(playersData);
     // buildDomString(playersData);
     // console.log(playersData);
     
-   
+   displayCageMatchResults(playersData);
     
     // console.log(displayCageMatchResults);
     // selectWinner(event);
    
 }
+
+const displayCageMatchResults = players => {
+  let domString = "";
+  // players.forEach(player => {
+  // domString += `<div>`;
+  domString +=   `<div class="col-sm-6">`;
+  domString +=     `<div class="thumbnail center-block">`;
+  domString +=       `<img src="${players.gravatar_url}" alt="...">`;
+  domString +=       `<div class="caption">`;
+  domString +=         `<h3 class="text-center">${players.points.total}</h3>`;
+  domString +=       `</div>`;
+  domString +=     `</div>`;
+  domString +=   `</div>`;
+  // domString += `</div>`;
+  console.log
+  printToDom(domString, "play");
+};
 
 const startApplication = () => {
   buildDomString(); 
