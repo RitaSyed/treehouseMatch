@@ -20,8 +20,29 @@ const buildDomString = () => {
     domString +=     `</div>`;
     domString +=   `</div>`;
   printToDom(domString, "play");
-
+  addEventListenerButton();
   }
-   buildDomString ();
 
-    // addEventListenerButton();
+const addEventListenerButton = () => {
+ let button = document.getElementById("button");
+ button.addEventListener("click", initializeButton);
+// console.log("clicked");
+}
+    
+const initializeButton = (e) => {
+  // console.log(e);
+  console.log("clicked")
+  let inputPlayer1 = document.getElementById("first-player");
+  let inputPlayer2 = document.getElementById("second-player");
+  let inputPlayer1Value = inputPlayer1.value;
+  let inputPlayer2Value = inputPlayer2.value;
+ 
+}
+
+
+const startApplication = () => {
+  buildDomString(); 
+
+};
+
+startApplication ();
