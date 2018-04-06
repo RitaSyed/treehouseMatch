@@ -36,9 +36,36 @@ const initializeButton = (e) => {
   let inputPlayer2 = document.getElementById("second-player");
   let inputPlayer1Value = inputPlayer1.value;
   let inputPlayer2Value = inputPlayer2.value;
- 
+  xhr1(inputPlayer1Value);
+  xhr1(inputPlayer2Value);
 }
 
+
+const xhr1 = (inputPlayerUsername) =>{
+  let jobsRequest = new XMLHttpRequest();
+  jobsRequest.addEventListener("load", player1JSONConvert);
+  // console.log(jobsJSONConvert);
+  jobsRequest.addEventListener("error", executeThisCodeIfXHRFails);
+  jobsRequest.open("GET", `https://teamtreehouse.com/${inputPlayerUsername}.json`);
+  jobsRequest.send();
+}
+
+function executeThisCodeIfXHRFails () {
+}
+
+  function player1JSONConvert() {
+    let playersData = JSON.parse(this.responseText);
+    console.log("profile");
+    // buildDomString(playersData);
+    // buildDomString(playersData);
+    // console.log(playersData);
+    
+   
+    
+    // console.log(displayCageMatchResults);
+    // selectWinner(event);
+   
+}
 
 const startApplication = () => {
   buildDomString(); 
