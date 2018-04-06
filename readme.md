@@ -8,7 +8,7 @@ The site should have two inputs and a button. Treehouse username is typed in the
 ![WebPage](https://raw.githubusercontent.com/RitaSyed/treehouseMatch/master/screenshots/whoIsTheWinnerView.PNG)
 ![WebPage](https://raw.githubusercontent.com/RitaSyed/treehouseMatch/master/screenshots/badgesView.PNG)
 
-##Technologies Used:
+## Technologies Used:
 1. HTML5, CSS, JavaScript
 2. http://getbootstrap.com/docs/3.3/
 
@@ -19,4 +19,4 @@ The site should have two inputs and a button. Treehouse username is typed in the
 1. In your terminal, ```hs -p 9999```
 1. In your browser navigation to: localhost:9999
 ## Contributers
-[Margarita Syed](https://github.com/RitaSyed)
+[Margarita Syed(Patrick)](https://github.com/RitaSyed)
