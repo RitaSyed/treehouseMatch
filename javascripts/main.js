@@ -8,12 +8,12 @@ const printToDom = (domString, divId) => {
 // prints input boxes and button
 const buildDomString = () => {
   let domString = "";
-    domString +=  `<div class="form-group">`;
-    domString +=     `<div class="width pull-left">`;
+    domString +=  `<div class="sf">`;
+    domString +=     `<div class="form-group pull-left">`;
     domString +=       `<label for="first-player">Player 1</label>`;
     domString +=       `<input type="text" class="form-control" id="first-player" placeholder="username">`;
     domString +=     `</div>`;
-    domString +=     `<div class="width pull-right">`;
+    domString +=     `<div class="form-group pull-right">`;
     domString +=       `<label for="second-player">Player 2</label>`;
     domString +=       `<input type="text" class="form-control" id="second-player" placeholder="username">`;
     domString +=     `</div>`;
@@ -113,7 +113,7 @@ const displayWinner = () => {
   }
     domString += `</div>`;
   winnerBadges[0].forEach((badge) => {
-    domString +=  `<div class="col-xs-6 col-md-3 col-lg-2">`;
+    domString +=  `<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">`;
     domString +=    `<div class="panel">`;
     domString +=      `<div class="panel-heading">`;
     domString +=        `<p class="text-center badge-name">${badge.name}</p>`;
