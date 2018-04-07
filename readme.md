@@ -1,4 +1,4 @@
-# Travel Diary
+# Treehouse Cage Match
 
 ## Description
 The site should have two inputs and a button. Treehouse username is typed in the inputs and then button is clicked. Once the button is hit, the profile pictures of the two profiles are displayed with the total number of points for each profile. The username of the person with the most points is displayed as the winner. The winners badges are displayed too. 
