@@ -17,7 +17,7 @@ const buildDomString = () => {
     domString +=       `<label for="second-player">Player 2</label>`;
     domString +=       `<input type="text" class="form-control" id="second-player" placeholder="username">`;
     domString +=     `</div>`;
-    domString +=     `<button type="button" id="button" class="btn btn-success center-block">Start Cage Match</button>`;
+    domString +=     `<button type="button" id="button" class="btn btn-lg btn-success center-block clearfix">Start Cage Match</button>`;
     domString +=   `</div>`;
   printToDom(domString, "play");
   addEventListenerButton();

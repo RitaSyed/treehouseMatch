@@ -64,4 +64,9 @@ input {
 
 #button{
   font-family: 'Ultra', serif;
+  font-size: 1.5em;
+}
+
+.clearfix {
+  clear: both;
 }
