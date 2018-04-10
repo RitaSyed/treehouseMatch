@@ -5,24 +5,6 @@ const printToDom = (domString, divId) => {
   document.getElementById(divId).innerHTML += domString;
 };
 
-// prints input boxes and button
-const buildDomString = () => {
-  let domString = "";
-    domString +=  `<div class="sf">`;
-    domString +=     `<div class="form-group pull-left">`;
-    domString +=       `<label for="first-player">Player 1</label>`;
-    domString +=       `<input type="text" class="form-control" id="first-player" placeholder="username">`;
-    domString +=     `</div>`;
-    domString +=     `<div class="form-group pull-right">`;
-    domString +=       `<label for="second-player">Player 2</label>`;
-    domString +=       `<input type="text" class="form-control" id="second-player" placeholder="username">`;
-    domString +=     `</div>`;
-    domString +=     `<button type="button" id="button" class="btn btn-lg btn-success center-block clearfix">Start Cage Match</button>`;
-    domString +=   `</div>`;
-  printToDom(domString, "play");
-  addEventListenerButton();
-  };
-
 // adds event listener on the button
 const addEventListenerButton = () => {
  let button = document.getElementById("button");
@@ -36,9 +18,11 @@ const initializeButton = (e) => {
   let inputPlayer2 = document.getElementById("second-player");
   let inputPlayer1Value = inputPlayer1.value;
   let inputPlayer2Value = inputPlayer2.value;
+  inputPlayer1.value="";
+  inputPlayer2.value="";
   xhr(inputPlayer1Value);
   xhr(inputPlayer2Value);
-  setTimeout(displayWinner, 2500);
+  setTimeout(displayWinner, 2000);
 };
 
 // sends the xhr for players
@@ -124,14 +108,14 @@ const displayWinner = () => {
     domString +=     `</div>`;
     domString += `</div>`;
   });
-  printToDom(domString, "play");
+  printToDom(domString, "play2");
   domString = "";
   playersInfo =[];
   addEventListenerButton();
 }
   
 const startApplication = () => {
-  buildDomString(); 
+  addEventListenerButton(); 
 };
 
 startApplication ();
