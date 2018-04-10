@@ -9,8 +9,28 @@
   <title>Document</title>
 </head>
 <body>
-  <div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-md-3 col-sm-offset-2">
+        <div class="form-group">
+          <label for="first-player">Player 1</label>
+          <input type="text" class="form-control" id="first-player" placeholder="username">
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-3 col-sm-offset-2">
+        <div class="form-group">
+          <label for="second-player">Player 2</label>
+          <input type="text" class="form-control" id="second-player" placeholder="username">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" id="button" class="btn btn-lg btn-success center-block">Start Cage Match</button>
+      </div>
+  </div>
     <div id="play"></div>
+    <div id="play2"></div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
